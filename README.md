@@ -1,4 +1,7 @@
 # Realtime Chat App (Next.js & Pusher)
+TODO:
+* need to update to newest version of react and fix that
+* remove sentiment analysis
 
 This project contains the source code for a very simple realtime chat application with sentiment analysis. With sentiment analysis, we are able to detect the mood of a person based on the words they use in their chat messages. 
 
