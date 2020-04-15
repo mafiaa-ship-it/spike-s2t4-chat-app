@@ -19,13 +19,15 @@ const pusher = new Pusher({
   cluster: process.env.PUSHER_APP_CLUSTER,
   encrypted: true,
 });
-console.log(pusher);
+
 app
   .prepare()
   .then(() => {
     const server = express();
     const chatHistory = { messages: [] };
-
+    server.get("/test", function (req, res) {
+      res.send(`${process.env.TEST}`);
+    });
     server.use(cors());
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: true }));
